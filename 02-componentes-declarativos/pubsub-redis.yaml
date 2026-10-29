@@ -7,11 +7,7 @@ spec:
   type: pubsub.redis
   version: v1
   metadata:
-    # TODO 1: Completar el valor de redisHost con el DNS interno de Kubernetes.
-    # Formato: <nombre-del-service>.<namespace>.svc.cluster.local:<puerto>
-    # Pista: ejecuta `kubectl get svc -n redis` para ver el nombre del Service.
     - name: redisHost
-      value: "" # <-- COMPLETAR
-
+      value: "redis-master.redis.svc.cluster.local:6379"
     - name: redisPassword
       value: ""
